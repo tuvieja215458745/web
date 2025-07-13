@@ -4,101 +4,118 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Compra tu Ticket</title>
-  <link rel="stylesheet" href="styles/buy.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
 
-  <!-- Encabezado -->
+  <!-- ---------- ENCABEZADO ---------- -->
   <header class="box_title">
     <h1>COMPRA TU TICKET!!</h1>
     <img src="images/ticket.png" alt="Ticket" width="250" />
   </header>
 
-  <!-- Formulario -->
+  <!-- ---------- FORMULARIO DE DATOS ---------- -->
   <main class="form_container">
     <h2>RELLENE SUS DATOS</h2>
     
-    <form action="pay.html" method="get">
-      <div class="input_group">
-        <div class="input_box">
-          <label for="nombre">NOMBRE</label>
-          <input type="text" id="nombre" name="nombre" required>
-        </div>
-        <div class="input_box">
-          <label for="apellido">APELLIDO</label>
-          <input type="text" id="apellido" name="apellido" required>
-        </div>
-      </div>
+    <form action="pay.html" method="get" class="form_content">
 
-      <div class="input_group">
-        <div class="input_box">
-          <label for="celular">CELULAR</label>
-          <input type="tel" id="celular" name="celular" required>
+      <!-- ---------- todos los campos y el checkbox ---------- -->
+      <div>
+        <!-- ---------- GRUPO DE NOMBRE Y APELLIDO ---------- -->
+        <div class="input_group">
+          <div class="input_box">
+            <label for="nombre">NOMBRE</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="input_box">
+            <label for="apellido">APELLIDO</label>
+            <input type="text" id="apellido" name="apellido" required>
+          </div>
         </div>
 
-        <div class="input_box">
-          <label for="dni">DNI / C.E</label>
-          <input type="text" id="dni" name="dni" required>
+        <!-- ---------- GRUPO DE CELULAR Y DNI ---------- -->
+        <div class="input_group">
+          <div class="input_box">
+            <label for="celular">CELULAR</label>
+            <input type="tel" id="celular" name="celular" required>
+          </div>
+
+          <div class="input_box">
+            <label for="dni">DNI / C.E</label>
+            <input type="text" id="dni" name="dni" required>
+          </div>
+        </div>
+
+        <!-- ---------- CORREO ELECTRÓNICO ---------- -->
+        <div class="input_full">
+          <label for="correo">CORREO</label>
+          <input type="email" id="correo" name="correo" required>
+        </div>
+
+        <!-- ---------- CHECKBOX DE TÉRMINOS ---------- -->
+        <div class="checkbox_container">
+          <input type="checkbox" id="acepto" required>
+          <label for="acepto">
+            ACEPTAR LOS TERMINOS Y CONDICIONES DE LA PAGINA WEB
+            <a href="#" id="verTerminos">terminos y condiciones.</a>
+          </label>
+        </div>
+
+        <!-- ---------- MODAL DE TÉRMINOS Y CONDICIONES ---------- -->
+        <div class="modal" id="modalTerminos">
+          <div class="modal_content">
+            <span class="close" id="cerrarModal">&times;</span>
+            <h2>TÉRMINOS Y CONDICIONES DE LA PÁGINA WEB</h2>
+            <p><strong>Última actualización:</strong> 01/07/2025</p>
+            <ol>
+              <li><strong>Aceptación de los Términos</strong><br>
+                Al utilizar esta página web y participar en nuestras rifas, aceptas cumplir con los siguientes términos y condiciones. Si no estás de acuerdo, por favor no utilices este sitio.
+              </li>
+              <li><strong>Participación en las rifas</strong><br>
+                Solo pueden participar personas mayores de 18 años.<br>
+                La compra de un ticket da derecho a participar en el sorteo de los premios especificados.<br>
+                Cada ticket es personal e intransferible.
+              </li>
+              <li><strong>Datos personales</strong><br>
+                Los datos ingresados por el usuario deben ser reales y verificados.<br>
+                Nos comprometemos a proteger tu información de acuerdo con nuestra política de privacidad.<br>
+                Usaremos tus datos únicamente para validar tu participación y contactarte en caso de ganar.
+              </li>
+              <li><strong>Sorteos y premios</strong><br>
+                La fecha y hora del sorteo serán publicadas en nuestras redes sociales oficiales.<br>
+                El sorteo se realizará de forma transparente y al azar.<br>
+                El ganador será contactado mediante los datos proporcionados.
+              </li>
+              <li><strong>Modificaciones</strong><br>
+                Nos reservamos el derecho de actualizar estos términos en cualquier momento. Cualquier cambio será comunicado en este sitio web.
+              </li>
+            </ol>
+          </div>
         </div>
       </div>
 
-      <div class="input_full">
-        <label for="correo">CORREO</label>
-        <input type="email" id="correo" name="correo" required>
-      </div>
+      <!-- ---------- ADVERTENCIA y BOTONES DE ACCIÓN ---------- -->
+      <div class="form_footer">
 
-      <div class="checkbox_container">
-        <input type="checkbox" id="acepto" required>
-        <label for="acepto">
-          ACEPTAR LOS TERMINOS Y CONDICIONES DE LA PAGINA WEB
-          <a href="#" id="verTerminos">terminos y condiciones.</a>
-        </label>
-      </div>
+        <!-- ---------- ADVERTENCIA ---------- -->
+        <p class="warning">
+          POR FAVOR RELLENE SUS DATOS CORRECTAMENTE PARA EVITAR PROBLEMAS DE AUTENTIFICACION y no olvide leer los TERMINOS Y CONDICIONES
+        </p>
 
-      <!-- Panel de Términos -->
-      <div class="modal" id="modalTerminos">
-        <div class="modal_content">
-          <span class="close" id="cerrarModal">&times;</span>
-          <h2>TÉRMINOS Y CONDICIONES DE LA PÁGINA WEB</h2>
-          <p><strong>Última actualización:</strong> 01/07/2025</p>
-          <ol>
-            <li><strong>Aceptación de los Términos</strong><br>
-              Al utilizar esta página web y participar en nuestras rifas, aceptas cumplir con los siguientes términos y condiciones. Si no estás de acuerdo, por favor no utilices este sitio.
-            </li>
-            <li><strong>Participación en las rifas</strong><br>
-              Solo pueden participar personas mayores de 18 años.<br>
-              La compra de un ticket da derecho a participar en el sorteo de los premios especificados.<br>
-              Cada ticket es personal e intransferible.
-            </li>
-            <li><strong>Datos personales</strong><br>
-              Los datos ingresados por el usuario deben ser reales y verificados.<br>
-              Nos comprometemos a proteger tu información de acuerdo con nuestra política de privacidad.<br>
-              Usaremos tus datos únicamente para validar tu participación y contactarte en caso de ganar.
-            </li>
-            <li><strong>Sorteos y premios</strong><br>
-              La fecha y hora del sorteo serán publicadas en nuestras redes sociales oficiales.<br>
-              El sorteo se realizará de forma transparente y al azar.<br>
-              El ganador será contactado mediante los datos proporcionados.
-            </li>
-            <li><strong>Modificaciones</strong><br>
-              Nos reservamos el derecho de actualizar estos términos en cualquier momento. Cualquier cambio será comunicado en este sitio web.
-            </li>
-          </ol>
+        <!-- ---------- BOTONES DE ACCIÓN ---------- -->
+        <div class="botones_accion">
+          <a href="index.html" class="boton boton_atras">Atras</a>
+          <button type="submit" class="boton">CONTINUAR</button>
         </div>
+
       </div>
 
-      <p class="warning">
-        POR FAVOR RELLENE SUS DATOS CORRECTAMENTE PARA EVITAR PROBLEMAS DE AUTENTIFICACION y no olvide leer los TERMINOS Y CONDICIONES
-      </p>
-
-      <div class="botones_accion">
-        <a href="index.html" class="boton boton_atras">Atras</a>
-        <button type="submit" class="boton">CONTINUAR</button>
-      </div>
     
     </form>
   </main>
   
+  <!-- ---------- SCRIPT DE MODAL ---------- -->
   <script>
     const modal = document.getElementById("modalTerminos");
     const enlace = document.getElementById("verTerminos");
