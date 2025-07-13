@@ -4,80 +4,89 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Compra tu Ticket</title>
-  <link rel="stylesheet" href="styles/pay.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 
 <body>
 
-  <form action="#" method="get">
+  <!-- ---------- ENCABEZADO ---------- -->
+  <header class="box_title">
+    <h1>COMPRA TU TICKET!!</h1>
+    <img src="images/ticket.png" alt="Ticket" width="250" />
+  </header>
 
-    <!-- ---------- ENCABEZADO ---------- -->
-    <header class="box_title">
-      <h1>COMPRA TU TICKET!!</h1>
-      <img src="images/ticket.png" alt="Ticket" width="250" />
-    </header>
+  <!-- ---------- FORMULARIO DE PAGO ---------- -->
+  <main class="form_container">
+    <h2 class="payment_title">METODO DE PAGO</h2>
 
-    <!-- ---------- FORMULARIO DE PAGO ---------- -->
-    <div class="form_container">
-      <h2 class="payment_title">METODO DE PAGO</h2>
-      <div class="payment_methods">
-        <img src="images/icon redes/yape.png" alt="Yape" class="yp">
-        <img src="images/icon redes/izipay.png" alt="Izipay" class="izipay">
-        <img src="images/icon redes/plin.png" alt="Plin" class="yp">
-      </div>
+    <form action="#" method="get" class="form_content">
 
-      <!-- ---------- CAPTURA DE PAGO ---------- -->
-      <h3 class="capture_title">CAPTURA DE PAGO</h3>
-      <div class="upload_area">
-        <button class="upload_button">+</button>
-      </div>
+      <!-- ---------- todos los campos y el checkbox ---------- -->
+      <div>
+        <!-- ---------- METODO DE PAGO ---------- -->
+        <div class="payment_methods">
+          <img src="images/icon redes/yape.png" alt="Yape" class="yp">
+          <img src="images/icon redes/izipay.png" alt="Izipay" class="izipay">
+          <img src="images/icon redes/plin.png" alt="Plin" class="yp">
+        </div>
 
-      <!-- ---------- CHECKBOX ---------- -->
-      <div class="checkbox_container">
-        <input type="checkbox" id="acepto" required>
-        <label for="acepto">
-          ACEPTAR LOS TERMINOS Y CONDICIONES DEL METODO DE PAGO
-          <a href="#" id="abrir_modal">terminos y condiciones.</a>
-        </label>
-      </div>
+        <!-- ---------- CAPTURA DE PAGO ---------- -->
+        <h3 class="capture_title">CAPTURA DE PAGO</h3>
+        <div class="upload_area">
+          <button class="upload_button">+</button>
+        </div>
 
-      <!-- ---------- MODAL DE TÉRMINOS Y CONDICIONES ---------- -->
-      <div id="modal_terminos" class="modal">
-        <div class="modal_content">
-          <span class="close_modal" id="cerrar_modal">&times;</span>
-          <h2>Terminos y Condiciones del Metodo de Pago</h2>
-          <p><strong>Última actualización:</strong> 01/07/2025</p>
+        <!-- ---------- CHECKBOX ---------- -->
+        <div class="checkbox_container">
+          <input type="checkbox" id="acepto" required>
+          <label for="acepto">
+            ACEPTAR LOS TERMINOS Y CONDICIONES DEL METODO DE PAGO
+            <a href="#" id="abrir_modal">terminos y condiciones.</a>
+          </label>
+        </div>
 
-          <h3>1. Métodos de pago aceptados</h3>
-          <p>Los métodos aceptados son: Yape, Izipay y Plin.<br>
-          El pago debe ser realizado desde una cuenta registrada con el nombre del participante.</p>
+        <!-- ---------- MODAL DE TÉRMINOS Y CONDICIONES ---------- -->
+        <div id="modal_terminos" class="modal">
+          <div class="modal_content">
+            <span class="close_modal" id="cerrar_modal">&times;</span>
+            <h2>Terminos y Condiciones del Metodo de Pago</h2>
+            <p><strong>Última actualización:</strong> 01/07/2025</p>
 
-          <h3>2. Validación del pago</h3>
-          <p>Para validar tu compra, deberás adjuntar una captura clara del comprobante de pago.<br>
-          Si no se puede verificar el pago, no se emitirá el ticket.</p>
+            <h3>1. Métodos de pago aceptados</h3>
+            <p>Los métodos aceptados son: Yape, Izipay y Plin.<br>
+            El pago debe ser realizado desde una cuenta registrada con el nombre del participante.</p>
 
-          <h3>3. No se aceptan devoluciones</h3>
-          <p>Una vez realizado el pago, no se aceptan devoluciones.<br>
-          Asegúrate de revisar todos tus datos antes de completar la operación.</p>
+            <h3>2. Validación del pago</h3>
+            <p>Para validar tu compra, deberás adjuntar una captura clara del comprobante de pago.<br>
+            Si no se puede verificar el pago, no se emitirá el ticket.</p>
 
-          <h3>4. Responsabilidad</h3>
-          <p>No nos hacemos responsables por errores en el proceso de pago cometidos por el usuario (como montos incorrectos o pagos a cuentas equivocadas).</p>
+            <h3>3. No se aceptan devoluciones</h3>
+            <p>Una vez realizado el pago, no se aceptan devoluciones.<br>
+            Asegúrate de revisar todos tus datos antes de completar la operación.</p>
+
+            <h3>4. Responsabilidad</h3>
+            <p>No nos hacemos responsables por errores en el proceso de pago cometidos por el usuario (como montos incorrectos o pagos a cuentas equivocadas).</p>
+          </div>
         </div>
       </div>
+    
+      <!-- ---------- ADVERTENCIA y BOTONES DE ACCIÓN ---------- -->
+      <div class="form_footer">
 
+        <!-- ---------- ADVERTENCIA ---------- -->
+        <p class="warning">POR FAVOR PAGAR CON UNA CUENTA REGISTRADA A SU NOMBRE. DE LO CONTRARIO SU AUTENTIFICACION NO SERA VALIDA</p>
 
-      <!-- ---------- ADVERTENCIA ---------- -->
-      <p class="warning">POR FAVOR PAGAR CON UNA CUENTA REGISTRADA A SU NOMBRE. DE LO CONTRARIO SU AUTENTIFICACION NO SERA VALIDA</p>
-
-      <!-- ---------- BOTÓN FINALIZAR ---------- -->
-      <div class="botones_accion">
-        <button class="boton boton_atras" onclick="history.back()">Atras</button>
-        <button class="boton" type="submit">Finalizar</button>
+        <!-- ---------- BOTÓN FINALIZAR ---------- -->
+        <div class="botones_accion">
+          <a href="buy.html" class="boton boton_atras">Atras</a>
+          <button class="boton" type="submit">Finalizar</button>
+        </div>
+        
       </div>
       
-    </div>
+    </form>
+  </main>
   
-  </form>
 
   <script>
     const abrirModal = document.getElementById("abrir_modal");
