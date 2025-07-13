@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compra tu Ticket</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+
+  <!-- ---------- ENCABEZADO ---------- -->
+  <header class="box_title">
+    <h1>COMPRA TU TICKET!!</h1>
+    <img src="images/ticket.png" alt="Ticket" width="250" />
+  </header>
+
+  <!-- ---------- FORMULARIO DE PAGO ---------- -->
+  <main class="form_container">
+    
+    <form action="#" method="get" class="form_content">
+      
+      <!-- ---------- todos los campos y el checkbox ---------- -->
+      <div>
+        <!-- ---------- NUMERO DE RIFA/TICKET ---------- -->
+        <div class="numero_ticket">
+          <h2 class="numero_ticket_title">ESCOJA SU TICKET</h2>
+          
+          <!-- PANEL DE TICKETS -->
+          <div class="ticket_selector">
+            <div class="ticket_grid">
+              <!-- Botones de ticket del 1 al 50 -->
+              <button type="button" class="ticket_button">1</button>
+              <button type="button" class="ticket_button">2</button>
+              <button type="button" class="ticket_button">3</button>
+              <button type="button" class="ticket_button">4</button>
+              <button type="button" class="ticket_button">5</button>
+              <button type="button" class="ticket_button">6</button>
+              <button type="button" class="ticket_button">7</button>
+              <button type="button" class="ticket_button">8</button>
+              <button type="button" class="ticket_button">9</button>
+              <button type="button" class="ticket_button">10</button>
+              <button type="button" class="ticket_button">11</button>
+              <button type="button" class="ticket_button">12</button>
+              <button type="button" class="ticket_button">13</button>
+              <button type="button" class="ticket_button">14</button>
+              <button type="button" class="ticket_button">15</button>
+              <button type="button" class="ticket_button">16</button>
+              <button type="button" class="ticket_button">17</button>
+              <button type="button" class="ticket_button">18</button>
+              <button type="button" class="ticket_button">19</button>
+              <button type="button" class="ticket_button">20</button>
+              <button type="button" class="ticket_button">21</button>
+              <button type="button" class="ticket_button">22</button>
+              <button type="button" class="ticket_button">23</button>
+              <button type="button" class="ticket_button">24</button>
+              <button type="button" class="ticket_button">25</button>
+              <button type="button" class="ticket_button">26</button>
+              <button type="button" class="ticket_button">27</button>
+              <button type="button" class="ticket_button">28</button>
+              <button type="button" class="ticket_button">29</button>
+              <button type="button" class="ticket_button">30</button>
+              <button type="button" class="ticket_button">31</button>
+              <button type="button" class="ticket_button">32</button>
+              <button type="button" class="ticket_button">33</button>
+              <button type="button" class="ticket_button">34</button>
+              <button type="button" class="ticket_button">35</button>
+              <button type="button" class="ticket_button">36</button>
+              <button type="button" class="ticket_button">37</button>
+              <button type="button" class="ticket_button">38</button>
+              <button type="button" class="ticket_button">39</button>
+              <button type="button" class="ticket_button">40</button>
+              <button type="button" class="ticket_button">41</button>
+              <button type="button" class="ticket_button">42</button>
+              <button type="button" class="ticket_button">43</button>
+              <button type="button" class="ticket_button">44</button>
+              <button type="button" class="ticket_button">45</button>
+              <button type="button" class="ticket_button">46</button>
+              <button type="button" class="ticket_button">47</button>
+              <button type="button" class="ticket_button">48</button>
+              <button type="button" class="ticket_button">49</button>
+              <button type="button" class="ticket_button">50</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ---------- METODO DE PAGO ---------- -->
+        <button class="boton_pago" type="button" id="mostrar_qr">REALIZAR PAGO</button>
+
+        <!-- ---------- MODAL QR YAPE ---------- -->
+        <div id="modal_qr" class="modal_qr">
+          <div class="modal_qr_content">
+            <span class="close_qr" id="cerrar_qr">&times;</span>
+            <img src="images/yapeQR.png" alt="QR de Yape" />
+          </div>
+        </div>
+
+        <!-- ---------- CAPTURA DE PAGO ---------- -->
+        <div class="upload_area">
+          <div class="upload_content">
+            <h3 class="capture_title">CAPTURA DE PAGO</h3>
+            <div>
+              <input type="file" id="captura_pago" accept="image/*" hidden>
+              <button type="button" class="upload_button" id="boton_captura">+</button>
+              <span id="check_icon" class="check_icon">&#10004;</span> <!-- ✔ -->
+            </div>
+          </div>
+        </div>
+
+        <!-- ---------- CHECKBOX ---------- -->
+        <div class="checkbox_container">
+          <input type="checkbox" id="acepto" required>
+          <label for="acepto">
+            ACEPTAR LOS TERMINOS Y CONDICIONES DEL METODO DE PAGO
+            <a href="#" id="abrir_modal">terminos y condiciones.</a>
+          </label>
+        </div>
+
+        <!-- ---------- MODAL DE TÉRMINOS Y CONDICIONES ---------- -->
+        <div id="modal_terminos" class="modal">
+          <div class="modal_content">
+            <span class="close_modal" id="cerrar_modal">&times;</span>
+            <h2>Terminos y Condiciones del Metodo de Pago</h2>
+            <p><strong>Última actualización:</strong> 01/07/2025</p>
+
+            <h3>1. Métodos de pago aceptados</h3>
+            <p>Los métodos aceptados son: Yape, Izipay y Plin.<br>
+            El pago debe ser realizado desde una cuenta registrada con el nombre del participante.</p>
+
+            <h3>2. Validación del pago</h3>
+            <p>Para validar tu compra, deberás adjuntar una captura clara del comprobante de pago.<br>
+            Si no se puede verificar el pago, no se emitirá el ticket.</p>
+
+            <h3>3. No se aceptan devoluciones</h3>
+            <p>Una vez realizado el pago, no se aceptan devoluciones.<br>
+            Asegúrate de revisar todos tus datos antes de completar la operación.</p>
+
+            <h3>4. Responsabilidad</h3>
+            <p>No nos hacemos responsables por errores en el proceso de pago cometidos por el usuario (como montos incorrectos o pagos a cuentas equivocadas).</p>
+          </div>
+        </div>
+      </div>
+    
+      <!-- ---------- ADVERTENCIA y BOTONES DE ACCIÓN ---------- -->
+      <div class="form_footer">
+
+        <!-- ---------- ADVERTENCIA ---------- -->
+        <p class="warning">POR FAVOR PAGAR CON UNA CUENTA REGISTRADA A SU NOMBRE. DE LO CONTRARIO SU AUTENTIFICACION NO SERA VALIDA</p>
+
+        <!-- ---------- BOTÓN FINALIZAR ---------- -->
+        <div class="botones_accion">
+          <a href="buy.html" class="boton boton_atras">Atras</a>
+          <button class="boton" type="submit">Finalizar</button>
+        </div>
+        
+      </div>
+
+    </form>
+  </main>
+  
+
+  <script>
+    const abrirModal = document.getElementById("abrir_modal");
+    const cerrarModal = document.getElementById("cerrar_modal");
+    const modal = document.getElementById("modal_terminos");
+
+    abrirModal.addEventListener("click", function (e) {
+      e.preventDefault();
+      modal.style.display = "block";
+    });
+
+    cerrarModal.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+  <script>
+    const ticketButtons = document.querySelectorAll('.ticket_button');
+    let selectedTicket = null;
+
+    ticketButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        if (selectedTicket) {
+          selectedTicket.classList.remove('selected');
+        }
+
+        button.classList.add('selected');
+        selectedTicket = button;
+
+        // Puedes guardar este valor en un campo oculto si lo necesitas para el formulario
+        const ticketNumber = button.textContent;
+        console.log('Ticket seleccionado:', ticketNumber);
+      });
+    });
+  </script>
+  <script>
+    const botonPago = document.getElementById("mostrar_qr");
+    const modalQR = document.getElementById("modal_qr");
+    const cerrarQR = document.getElementById("cerrar_qr");
+    const checkboxTerminos = document.getElementById("acepto");
+
+    botonPago.addEventListener("click", () => {
+      if (checkboxTerminos.checked) {
+        modalQR.style.display = "flex";
+      } else {
+        alert("Debe aceptar los términos y condiciones para continuar.");
+      }
+    });
+
+    cerrarQR.addEventListener("click", () => {
+      modalQR.style.display = "none";
+    });
+
+    window.addEventListener("click", (event) => {
+      if (event.target === modalQR) {
+        modalQR.style.display = "none";
+      }
+    });
+  </script>
+  <script>
+    const botonCaptura = document.getElementById("boton_captura");
+    const inputCaptura = document.getElementById("captura_pago");
+    const checkIcon = document.getElementById("check_icon");
+    const checkbox = document.getElementById("acepto");
+    const formulario = document.querySelector("form");
+
+    let imagenCargada = false;
+
+    // Al hacer clic en "+" verificamos si aceptó términos
+    botonCaptura.addEventListener("click", () => {
+      if (!checkbox.checked) {
+        alert("Debes aceptar los términos y condiciones antes de subir el comprobante de pago.");
+        return;
+      }
+      inputCaptura.click();
+    });
+
+    // Al seleccionar imagen, mostrar check verde
+    inputCaptura.addEventListener("change", () => {
+      if (inputCaptura.files.length > 0) {
+        imagenCargada = true;
+        checkIcon.style.display = "inline";
+      } else {
+        imagenCargada = false;
+        checkIcon.style.display = "none";
+      }
+    });
+
+    // Validación final al enviar formulario
+    formulario.addEventListener("submit", function (e) {
+      if (!checkbox.checked) {
+        e.preventDefault();
+        alert("Debes aceptar los términos y condiciones.");
+        return;
+      }
+
+      if (!imagenCargada) {
+        e.preventDefault();
+        alert("Debes subir una imagen de tu comprobante de pago.");
+        return;
+      }
+
+      alert("¡Compra finalizada con éxito!");
+    });
+  </script>
+
+
+</body>
+</html>
